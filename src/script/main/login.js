@@ -1,3 +1,6 @@
+import initWebSocket from './initWebSocket.js'
+import info from './info.js'
+
 const oUserName = $('.user-name') 
 oUserName.oninput = e => {
   const sUserName = oUserName.innerHTML
@@ -22,5 +25,9 @@ $('.chat-btn').onclick = e => {
   if (oUserName.innerHTML && sPorSrc){
     $('#chat-wrap').style.display = 'block'
     $('#login-wrap').style.display = 'none'
+    info.setUserName(oUserName.innerHTML)
+    info.setPortraitUrl(sPorSrc)
+    initWebSocket()
   }
 }
+
