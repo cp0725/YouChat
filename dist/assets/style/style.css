@@ -1,3 +1,71 @@
+html,body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-image: url(/assets/images/5a9adad6587422d20a82a0dbe865ac27.jpg);
+  background-size: 100% 100%;
+}
+
+#chat-wrap {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+#chat-wrap .user-list-wrap {
+  width: 260px;
+  height: 100%;
+  background: rgba(46, 50, 56, 0.8);
+  float: left;
+}
+
+#chat-wrap .message-wrap {
+  float: right;
+  width: calc(100% - 260px);
+  height: 100%;
+  background: rgba(238, 238, 238, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 180, 180, 0.5);
+  -webkit-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+html,body {
+  font-family: "-apple-system,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Arial,sans-serif";
+  padding: 0;
+  margin: 0;
+  color: #2e3135;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
 @charset "UTF-8";
 
 #login-wrap {
@@ -88,74 +156,6 @@
 
 #login-wrap .chat-btn:hover {
   background: #29c1b2;
-}
-
-p {
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-}
-
-html,body {
-  font-family: "-apple-system,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Arial,sans-serif";
-  padding: 0;
-  margin: 0;
-  color: #2e3135;
-}
-
-button {
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-}
-
-html,body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  background-image: url(/assets/images/5a9adad6587422d20a82a0dbe865ac27.jpg);
-  background-size: 100% 100%;
-}
-
-#chat-wrap {
-  display: none;
-  width: 100%;
-  height: 100%;
-}
-
-#chat-wrap .user-list-wrap {
-  width: 260px;
-  height: 100%;
-  background: rgba(46, 50, 56, 0.8);
-  float: left;
-}
-
-#chat-wrap .message-wrap {
-  float: right;
-  width: calc(100% - 260px);
-  height: 100%;
-  background: rgba(238, 238, 238, 0.9);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(180, 180, 180, 0.5);
-  -webkit-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-track-piece {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
 }
 
 .message-wrap {
