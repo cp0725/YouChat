@@ -2,7 +2,6 @@ import control from './control.js'
 import info from './info.js';
 export default {
   drawUserList(user){
-    console.log(user.__proto__.constructor.name)
     const TYPE = user.__proto__.constructor.name
     if (TYPE == 'Object'){
       $('.user-list').innerHTML += `

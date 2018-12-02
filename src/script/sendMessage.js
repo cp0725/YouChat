@@ -2,12 +2,14 @@ import info from './info.js'
 
 $('.send-message').onclick = function(){
   // 发送消息
+  const TEXT = $('.edit .inp').innerHTML.replace(/<div><br><\/div>/, '')
+  $('.edit .inp').innerHTML = ''
   if (info.member == 'group' || info.member == ''){
     window.socket.emit('sendMessageGroup', {
       id: info.id,
       name: info.name,
       url: info.url,
-      text: $('.edit .inp').innerHTML
+      text: TEXT
     })
   } else {
     window.socket.emit('sendMessageMember', {
@@ -15,10 +17,9 @@ $('.send-message').onclick = function(){
       id: info.id,
       name: info.name,
       url: info.url,
-      text: $('.edit .inp').innerHTML
+      text: TEXT
     })
   }
-  $('.edit .inp').innerHTML = ''
 }
 
 $('.edit .inp').onkeyup = function (event){

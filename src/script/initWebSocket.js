@@ -5,7 +5,6 @@ export default function(){
 
   window.socket = io()
   window.socket.on('connect', () => { // 连接成功
-    console.log('chengg', window.socket.id)
     const userInfo = {
       name: info.name,
       url: info.url,
@@ -17,17 +16,14 @@ export default function(){
   
   // 登陆
   window.socket.on('login', userInfo => {
-    console.log(userInfo)
     view.drawUserList(userInfo)
   })
   // 获取当前在线列表
   window.socket.on('userList', userList => {
-    console.log(userList)
     view.drawUserList(userList)
   })
   // 退出
   window.socket.on('quit', id => {
-    console.log(id)
     view.drawUserList(id)
   })
   // 接收群聊消息
@@ -42,11 +38,9 @@ export default function(){
       let nNewNum = $('.top .group').getAttribute('data-message')
       $('.top .group').setAttribute('data-message', Number(nNewNum) + 1)
     }
-    console.log(info)
   })
   // 接收私聊消息
   window.socket.on('sendMessageMember', message => {
-    // console.log(message)    
     if (message.id == info.id){ // 自己的消息回传
       if (info[`member__${message.memberId}`] == undefined) {
         info[`member__${message.memberId}`] = []

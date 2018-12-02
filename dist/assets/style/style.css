@@ -1,52 +1,3 @@
-html,body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  background-image: url(/assets/images/5a9adad6587422d20a82a0dbe865ac27.jpg);
-  background-size: 100% 100%;
-}
-
-#chat-wrap {
-  display: none;
-  width: 100%;
-  height: 100%;
-}
-
-#chat-wrap .user-list-wrap {
-  width: 260px;
-  height: 100%;
-  background: rgba(46, 50, 56, 0.8);
-  float: left;
-}
-
-#chat-wrap .message-wrap {
-  float: right;
-  width: calc(100% - 260px);
-  height: 100%;
-  background: rgba(238, 238, 238, 0.9);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(180, 180, 180, 0.5);
-  -webkit-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-track-piece {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
 p {
   padding: 0;
   margin: 0;
@@ -156,6 +107,110 @@ button {
 
 #login-wrap .chat-btn:hover {
   background: #29c1b2;
+}
+
+.user-list-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-list-wrap .my-info {
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 50px;
+  height: 50px;
+  display: flex;
+  padding: 20px 0 16px 20px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.user-list-wrap .my-info .portrait {
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+}
+
+.user-list-wrap .my-info .name {
+  color: #fff;
+  font-size: 18px;
+  padding-left: 10px;
+  width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-list-wrap .my-info .logo {
+  color: #ccc;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.user-list-wrap .user-list {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.user-list-wrap .user-list .item {
+  display: flex;
+  padding: 12px 18px;
+  border-bottom: 1px solid #3c3c3c;
+  cursor: pointer;
+}
+
+.user-list-wrap .user-list .item[data-now=true] {
+  background: rgba(39, 39, 39, 0.5);
+}
+
+.user-list-wrap .user-list .item[data-new=true] .item-name::after {
+  content: attr(data-message);
+  height: 14px;
+  padding: 0 8px;
+  float: right;
+  border-radius: 10px;
+  background: #de1616;
+  font-size: 12px;
+  text-align: center;
+  line-height: 14px;
+  color: #fafafa;
+}
+
+.user-list-wrap .user-list .item .item-por {
+  border-radius: 2px;
+  width: 42px;
+  height: 42px;
+}
+
+.user-list-wrap .user-list .item .item-info {
+  padding: 4px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 14px;
+  flex: 1;
+}
+
+.user-list-wrap .user-list .item .item-info .item-name {
+  height: 14px;
+}
+
+.user-list-wrap .user-list .item .item-info .item-name span {
+  display: inline-block;
+  width: 130px;
+  color: #fafafa;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-list-wrap .user-list .item .item-info .item-text {
+  font-size: 12px;
+  height: 14px;
+  width: 168px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #aaa;
 }
 
 .message-wrap {
@@ -310,106 +365,51 @@ button {
   line-height: 30px;
 }
 
-.user-list-wrap {
-  display: flex;
-  flex-direction: column;
-}
-
-.user-list-wrap .my-info {
-  flex-shrink: 0;
-  flex-grow: 0;
-  flex-basis: 50px;
-  height: 50px;
-  display: flex;
-  padding: 20px 0 16px 20px;
-  border-bottom: 1px solid #2d2d2d;
-}
-
-.user-list-wrap .my-info .portrait {
-  width: 50px;
-  height: 50px;
-  border-radius: 2px;
-}
-
-.user-list-wrap .my-info .name {
-  color: #fff;
-  font-size: 18px;
-  padding-left: 10px;
-  width: 130px;
+html,body {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
-.user-list-wrap .my-info .logo {
-  color: #ccc;
-  font-size: 18px;
-  padding-left: 10px;
+body {
+  background-image: url(/assets/images/5a9adad6587422d20a82a0dbe865ac27.jpg);
+  background-size: 100% 100%;
 }
 
-.user-list-wrap .user-list {
-  flex-grow: 1;
-  overflow-y: auto;
+#chat-wrap {
+  display: none;
+  width: 100%;
+  height: 100%;
 }
 
-.user-list-wrap .user-list .item {
-  display: flex;
-  padding: 12px 18px;
-  border-bottom: 1px solid #3c3c3c;
-  cursor: pointer;
+#chat-wrap .user-list-wrap {
+  width: 260px;
+  height: 100%;
+  background: rgba(46, 50, 56, 0.8);
+  float: left;
 }
 
-.user-list-wrap .user-list .item[data-now=true] {
-  background: rgba(39, 39, 39, 0.5);
-}
-
-.user-list-wrap .user-list .item[data-new=true] .item-name::after {
-  content: attr(data-message);
-  height: 14px;
-  padding: 0 8px;
+#chat-wrap .message-wrap {
   float: right;
-  border-radius: 10px;
-  background: #de1616;
-  font-size: 12px;
-  text-align: center;
-  line-height: 14px;
-  color: #fafafa;
+  width: calc(100% - 260px);
+  height: 100%;
+  background: rgba(238, 238, 238, 0.9);
 }
 
-.user-list-wrap .user-list .item .item-por {
-  border-radius: 2px;
-  width: 42px;
-  height: 42px;
+::-webkit-scrollbar-thumb {
+  background-color: rgba(180, 180, 180, 0.5);
+  -webkit-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
 }
 
-.user-list-wrap .user-list .item .item-info {
-  padding: 4px 0 0 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  line-height: 14px;
-  flex: 1;
+::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.user-list-wrap .user-list .item .item-info .item-name {
-  height: 14px;
-}
-
-.user-list-wrap .user-list .item .item-info .item-name span {
-  display: inline-block;
-  width: 130px;
-  color: #fafafa;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.user-list-wrap .user-list .item .item-info .item-text {
-  font-size: 12px;
-  height: 14px;
-  width: 168px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #aaa;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
