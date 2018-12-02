@@ -37,18 +37,16 @@
         background: rgba(39, 39, 39, 0.5)
       &[data-new=true] .item-name
         &::after
-          content: ''
+          content: attr(data-message)
+          height: 14px
+          padding: 0 8px
           float: right
-          width: 8px
-          height: 8px
-          border-radius: 6px
-          background: rgba(255,0,0,.38)
-          margin: 3px 3px 0 0
-        &::before
-          content: attr(data-usernew)
-          float: right
-          color: rgba(255,0,0,.38)
+          border-radius: 10px
+          background: #de1616
           font-size: 12px
+          text-align: center
+          line-height: 14px
+          color: #fafafa
       .item-por
         border-radius: 2px
         width: 42px
@@ -64,7 +62,7 @@
           height: 14px
           span
             display: inline-block
-            width: 110px
+            width: 130px
             color: #fafafa
             overflow: hidden
             text-overflow: ellipsis

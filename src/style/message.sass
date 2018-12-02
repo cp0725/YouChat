@@ -19,22 +19,27 @@
         border: 1px solid #2bb8aa
         background: #2bb8aa
         color: #fff
-        border: 0
     .group
+      cursor: pointer
       padding-left: 10px
       border-radius: 20px 0 0 20px
       margin-right: 1px
       position: relative
       &[data-new=true]::before
-        content: ''
-        width: 10px
-        height: 10px
-        background: rgba(255, 0, 0, 0.7)
+        content: attr(data-message)
+        height: 14px
+        width: 18px
+        line-height: 14px
+        background: #de1616
         border-radius: 10px
         position: absolute
-        left: 26px
-        top: 6px
+        left: 10px
+        top: 0
+        bottom: 0
+        color: #fafafa
+        margin: auto 0
     .member
+      cursor: pointer
       padding-right: 10px
       border-radius: 0 20px 20px 0
   .list
@@ -57,6 +62,14 @@
         padding: 9px
         margin-left: 12px
         word-break: break-all
+        position: relative
+        ::after
+          content: ''
+          position: absolute
+          border: 8px solid #b2e281
+          border-color: transparent #b2e281 transparent transparent
+          top: 12px
+          left: -15px          
       &[data-me=true]
         padding-right: 0
         padding-left: 52px
@@ -66,6 +79,10 @@
         .text
           margin-left: 0
           margin-right: 12px
+          ::after
+            border-color: transparent transparent transparent #b2e281
+            right: -15px
+            left: auto
   .edit
     height: 150px
     .inp
@@ -77,6 +94,11 @@
     .btn
       text-align: right
       padding: 10px 20px 0 0
+      span
+        font-size: 14px
+        color: #9E9E9E
+        line-height: 30px
+        padding-right: 10px
       .send-message
         width: 90px
         height: 30px
@@ -85,6 +107,4 @@
         color: #222222
         outline: none
         border-radius: 5px
-
-
-  
+        line-height: 30px

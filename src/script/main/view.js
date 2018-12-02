@@ -49,5 +49,6 @@ export default {
       </div>
     `)
     $('.message-wrap .list').innerHTML = HTML.join('')
+    $('.message-wrap .list').scrollTop = $('.message-wrap .list').scrollHeight
   }
 }

@@ -38,6 +38,9 @@ export default function(){
     }else{
       // 提示群聊新消息
       $('.top .group').setAttribute('data-new', 'true')
+
+      let nNewNum = $('.top .group').getAttribute('data-message')
+      $('.top .group').setAttribute('data-message', Number(nNewNum) + 1)
     }
     console.log(info)
   })
@@ -64,8 +67,8 @@ export default function(){
       if ($(`.item[data-id="${message.id}"]`)){
         $(`.item[data-id="${message.id}"]`).setAttribute('data-new', 'true')
 
-        let nNewNum = $(`.item[data-id="${message.id}"] .item-name`).getAttribute('data-usernew')
-        $(`.item[data-id="${message.id}"] .item-name`).setAttribute('data-usernew', Number(nNewNum)+1)
+        let nNewNum = $(`.item[data-id="${message.id}"] .item-name`).getAttribute('data-message')
+        $(`.item[data-id="${message.id}"] .item-name`).setAttribute('data-message', Number(nNewNum)+1)
       }
     }
     // userList 消息摘要

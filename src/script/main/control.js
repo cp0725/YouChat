@@ -9,6 +9,7 @@ $('.group').onclick = () => { // 群聊
   info.setData('member', 'group')
   view.drawMessageList(info.groupMessageList)
   $('.top .group').removeAttribute('data-new')
+  $('.top .group').setAttribute('data-message', 0)
 }
 $('.member').onclick = () => { // 成员
   $('.group').removeAttribute('data-now')
@@ -17,7 +18,7 @@ $('.member').onclick = () => { // 成员
   view.drawMessageList(info[`member__${member}`])
   if ($(`.item[data-id="${member}"]`)) {
     $(`.item[data-id="${member}"]`).removeAttribute('data-new')
-    $(`.item[data-id="${member}"] .item-name`).setAttribute('data-usernew', 0)
+    $(`.item[data-id="${member}"] .item-name`).setAttribute('data-message', 0)
   }
 }
 
@@ -36,7 +37,7 @@ export default {
       view.drawMessageList(info[`member__${info.member}`])
       if ($(`.item[data-id="${info.member}"]`)) {
         $(`.item[data-id="${info.member}"]`).removeAttribute('data-new')
-        $(`.item[data-id="${info.member}"] .item-name`).setAttribute('data-usernew', 0)
+        $(`.item[data-id="${info.member}"] .item-name`).setAttribute('data-message', 0)
       }
     })
   },

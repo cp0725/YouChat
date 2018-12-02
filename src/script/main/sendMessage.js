@@ -20,3 +20,10 @@ $('.send-message').onclick = function(){
   }
   $('.edit .inp').innerHTML = ''
 }
+
+$('.edit .inp').onkeyup = function (event){
+  if (event.keyCode == 13){
+    $('.send-message').click()
+    return false
+  }
+}
