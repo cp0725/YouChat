@@ -11,6 +11,7 @@ oUserName.oninput = e => {
   }
 }
 
+// 重构改成事件委托
 const oPortrait = $('.por', 'all')
 const oMyPor = $('.my-por')
 let sPorSrc = ''
@@ -23,10 +24,12 @@ tool.addEveArr(oPortrait, 'click', (e, dom) => {
 
 $('.chat-btn').onclick = e => {
   if (oUserName.innerHTML && sPorSrc){
+    $('.my-info .portrait').setAttribute('src', sPorSrc)
+    $('.my-info .name').innerHTML = oUserName.innerHTML
     $('#chat-wrap').style.display = 'block'
     $('#login-wrap').style.display = 'none'
-    info.setUserName(oUserName.innerHTML)
-    info.setPortraitUrl(sPorSrc)
+    info.setData('name', oUserName.innerHTML)
+    info.setData('url', sPorSrc)
     initWebSocket()
   }
 }

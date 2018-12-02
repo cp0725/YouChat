@@ -15,18 +15,28 @@
       line-height: 22px
       border: 1px solid #d6d6d6
       color: #555
+      &[data-now=true]
+        border: 1px solid #2bb8aa
+        background: #2bb8aa
+        color: #fff
+        border: 0
     .group
       padding-left: 10px
       border-radius: 20px 0 0 20px
       margin-right: 1px
+      position: relative
+      &[data-new=true]::before
+        content: ''
+        width: 10px
+        height: 10px
+        background: rgba(255, 0, 0, 0.7)
+        border-radius: 10px
+        position: absolute
+        left: 26px
+        top: 6px
     .member
       padding-right: 10px
       border-radius: 0 20px 20px 0
-    .now
-      border: 1px solid #2bb8aa
-      background: #2bb8aa
-      color: #fff
-      border: 0
   .list
     height: 200px
     flex: 1
@@ -35,11 +45,9 @@
     overflow-y: auto
     .item
       display: flex
-      justify-content: flex-end
-      padding-left: 30px
+      padding-right: 52px
       margin-bottom: 16px
       .portrait
-        order: 1
         width: 38px
         height: 38px
         border-radius: 2px
@@ -47,7 +55,17 @@
         background-color: #b2e281
         border-radius: 5px
         padding: 9px
-        margin-right: 12px
+        margin-left: 12px
+        word-break: break-all
+      &[data-me=true]
+        padding-right: 0
+        padding-left: 52px
+        justify-content: flex-end
+        .portrait
+          order: 1
+        .text
+          margin-left: 0
+          margin-right: 12px
   .edit
     height: 150px
     .inp

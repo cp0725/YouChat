@@ -17,6 +17,14 @@
       color: #fff
       font-size: 18px
       padding-left: 10px
+      width: 130px
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+    .logo
+      color: #ccc
+      font-size: 18px
+      padding-left: 10px
   .user-list
     flex-grow: 1
     overflow-y: auto
@@ -24,23 +32,48 @@
       display: flex
       padding: 12px 18px
       border-bottom: 1px solid #3c3c3c
+      cursor: pointer
+      &[data-now=true]
+        background: rgba(39, 39, 39, 0.5)
+      &[data-new=true] .item-name
+        &::after
+          content: ''
+          float: right
+          width: 8px
+          height: 8px
+          border-radius: 6px
+          background: rgba(255,0,0,.38)
+          margin: 3px 3px 0 0
+        &::before
+          content: attr(data-usernew)
+          float: right
+          color: rgba(255,0,0,.38)
+          font-size: 12px
       .item-por
         border-radius: 2px
         width: 42px
         height: 42px
       .item-info
-        padding: 4px 0 2px 10px
+        padding: 4px 0 0 10px
         display: flex
         flex-direction: column
         justify-content: space-between
         line-height: 14px
+        flex: 1
         .item-name
-          color: #fafafa
           height: 14px
+          span
+            display: inline-block
+            width: 110px
+            color: #fafafa
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
         .item-text
-          color: #aaa
+          font-size: 12px
           height: 14px
-
-
-
-
+          width: 168px
+          overflow: hidden
+          text-overflow: ellipsis
+          white-space: nowrap
+          color: #aaa

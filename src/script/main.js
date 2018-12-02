@@ -8,6 +8,6 @@ import tool from './api/tool.js'
 
 import userInfo from './main/login.js'
 import sendMessage from './main/sendMessage.js'
-
+import control from './main/control.js'
 
 console.log(userInfo, 'hello 简言')

@@ -23,23 +23,26 @@ io.on('connection', (socket) => {
   console.log(socket.id) // 获取当前连接进入的客户端的id
 
 
-
-
   // 登陆（自定义事件）
   socket.on('login', userInfo => {
     userList.push(userInfo)
-    io.sockets.emit('userList', userList)
+    socket.emit('userList', userList)
+    socket.broadcast.emit('login', userInfo)
   })
   // 退出（内置事件）
   socket.on('disconnect', reason => {
     userList = userList.filter(item => item.id != socket.id)
-    io.sockets.emit('userList', userList)
+    io.sockets.emit('quit', socket.id)
   })
   // 接收群聊消息 （自定义事件）
   socket.on('sendMessageGroup', message => {
     io.sockets.emit('sendMessageGroup', message)
   })
-
+  // 接收私聊消息 （自定义事件）
+  socket.on('sendMessageMember', message => {
+    socket.emit('sendMessageMember', message)
+    io.to(message.memberId).emit('sendMessageMember', message)
+  })
 
 
 

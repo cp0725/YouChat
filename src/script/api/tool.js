@@ -15,9 +15,15 @@ window.$ = (tag, all) => {
 }
 window.tool = {
   addEveArr(domArr, eventName, fun){
-    for (let i = 0; i < domArr.length; i++){
-      domArr[i].addEventListener(eventName, (e) => {
-        fun(e, domArr[i])
+    if (domArr.__proto__.constructor.name == 'NodeList'){
+      for (let i = 0; i < domArr.length; i++) {
+        domArr[i].addEventListener(eventName, e => {
+          fun(e, domArr[i])
+        })
+      }
+    }else{
+      domArr.addEventListener(eventName, e => {
+        fun(e, domArr)
       })
     }
   }
