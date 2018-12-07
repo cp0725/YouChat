@@ -22,6 +22,13 @@ $('.member').onclick = () => { // 成员
   }
 }
 
+$('.emoticon').onclick = e => { // 打开表情
+  e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true
+  $('.tool-bar').classList.toggle('emoticon-show')
+}
+$('body').onclick = e => {
+  $('.tool-bar').classList.remove('emoticon-show')
+}
 
 export default {
   bindEventUserList(dom){

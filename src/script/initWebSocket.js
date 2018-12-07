@@ -67,7 +67,7 @@ export default function(){
     }
     // userList 消息摘要
     if ($(`.item[data-id="${message.id}"]`)){
-      $(`.item[data-id="${message.id}"] .item-text`).innerHTML = message.text
+      $(`.item[data-id="${message.id}"] .item-text`).innerHTML = message.text || `[收到新灵魂]`
     }
   })
 }

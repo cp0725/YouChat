@@ -26,5 +26,20 @@ window.tool = {
         fun(e, domArr)
       })
     }
+  },
+  ajax(type, url, data, fun){
+    const ajax = new XMLHttpRequest()
+    ajax.open(type, url, true)
+    ajax.send(data)
+    ajax.onreadystatechange = function () {
+      if (ajax.readyState == 4 && ajax.status == 200) {
+        const res = JSON.parse(ajax.responseText)
+        if (ajax.responseText && res && res.ret == 1) {
+          fun(res.data)
+        } else {
+          alert('网络请求故障，请重试！')
+        }
+      }
+    }
   }
 }
