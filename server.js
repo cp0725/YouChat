@@ -50,7 +50,7 @@ io.on('connection', (socket) => {
     userList = userList.filter(item => item.id != socket.id)
     io.sockets.emit('quit', socket.id)
   })
-  
+
   // 接收群聊消息 
   socket.on('sendMessageGroup', message => {
     // 发送文件
@@ -104,6 +104,7 @@ server.listen(8686, () => {
   console.log(`server runing on port 8686 ...`)
   console.log(`http://127.0.0.1:8686/YouChat`)
 })
+
 
 /*
 nodemon配合webpack 打包客户端代码
