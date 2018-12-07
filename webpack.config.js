@@ -86,7 +86,7 @@ module.exports = {
     new extractTextWebpackPlugin('./assets/style/style.css'),
     // 忽略无效css
     new purifyCSSPlugin({
-       paths: glob.sync(path.join(__dirname, 'src/*.html')),
+       paths: glob.sync(path.join(__dirname, 'src/*.html'))
     })
   ],
   devServer: {

@@ -54,7 +54,6 @@ export default {
     }
   },
   drawMessageList(list){
-    console.log(list)
     $('.message-wrap .list').innerHTML = ''
     if (!list){ return} 
     const HTML = list.map(item => `
