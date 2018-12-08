@@ -62,6 +62,7 @@ $('.emoticon-wrap').onclick = e => {
   } else if (eventDom == 'upload') {
     $('#file').click()
   }
+  $('.mask').click() // 移动端关闭蒙版
 }
 
 $('#file').onchange = function (event) {

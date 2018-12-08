@@ -93,14 +93,14 @@
     height: 180px
     .tool-bar
       position: relative
-      padding-top: 3px
+      padding: 3px 0 6px 0
       height: 30px
       &::after
         content: ''
         display: none
         position: absolute
         left: 17px
-        bottom: 27px
+        bottom: 33px
         border: 10px solid transparent
         border-top-color: #fff
       .emoticon
@@ -127,7 +127,7 @@
         position: absolute
         background: #fff
         left: 12px
-        bottom: 46px
+        bottom: 52px
         border-radius: 3px
         overflow: hidden
         box-shadow: #999 0 2px 10px
@@ -142,7 +142,7 @@
           overflow: hidden
           float: left
           position: relative
-          border: 1px solid #e4e5e5
+          border: 1px solid #f5f5f5
           box-sizing: border-box
           border-right: 0
           border-bottom: 0
@@ -153,8 +153,8 @@
             top: 0
             bottom: 0
             margin: auto
-            max-width: 100%
-            max-height: 100%
+            max-width: 80%
+            max-height: 80%
             &:hover
               transition: transform 0.1s ease 0s
               transform: scale(1.08, 1.08)
@@ -162,13 +162,32 @@
           width: 80px
           height: 90px
           float: left
-          border-top: 1px solid #e4e5e5
-          border-left: 1px solid #e4e5e5
+          border-top: 1px solid #f5f5f5
+          border-left: 1px solid #f5f5f5
           box-sizing: border-box
           background: url(../images/add.png) no-repeat center
           background-size: 18px 18px
           &:hover
             background-size: 20px 20px
+      .packet-wrap
+        display: none
+        position: absolute
+        width: 250px
+        background: #fff
+        left: 12px
+        bottom: 52px
+        border-radius: 3px
+        box-shadow: #999 0 2px 10px
+        cursor: pointer
+        &::after
+          content: ''
+          position: absolute
+          left: 46px
+          bottom: -18px
+          border: 10px solid transparent
+          border-top-color: #fff
+        img
+          width: 250px
     .emoticon-show
       .emoticon-wrap
         display: block
@@ -177,7 +196,7 @@
     .inp
       font-size: 14px
       height: 80px
-      padding: 6px 16px 0 16px 
+      padding: 0px 16px 0 16px 
       outline: none
       overflow-y: auto
     .btn

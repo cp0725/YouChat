@@ -191,17 +191,18 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  line-height: 14px;
+  line-height: 16px;
   flex: 1;
 }
 
 .user-list-wrap .user-list .item .item-info .item-name {
-  height: 14px;
+  height: 16px;
 }
 
 .user-list-wrap .user-list .item .item-info .item-name span {
   display: inline-block;
   width: 130px;
+  height: 16px;
   color: #fafafa;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -349,7 +350,7 @@ button {
 
 .message-wrap .edit .tool-bar {
   position: relative;
-  padding-top: 3px;
+  padding: 3px 0 6px 0;
   height: 30px;
 }
 
@@ -358,7 +359,7 @@ button {
   display: none;
   position: absolute;
   left: 17px;
-  bottom: 27px;
+  bottom: 33px;
   border: 10px solid transparent;
   border-top-color: #fff;
 }
@@ -391,7 +392,7 @@ button {
   position: absolute;
   background: #fff;
   left: 12px;
-  bottom: 46px;
+  bottom: 52px;
   border-radius: 3px;
   overflow: hidden;
   box-shadow: #999 0 2px 10px;
@@ -412,7 +413,7 @@ button {
   overflow: hidden;
   float: left;
   position: relative;
-  border: 1px solid #e4e5e5;
+  border: 1px solid #f5f5f5;
   box-sizing: border-box;
   border-right: 0;
   border-bottom: 0;
@@ -425,8 +426,8 @@ button {
   top: 0;
   bottom: 0;
   margin: auto;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 80%;
+  max-height: 80%;
 }
 
 .message-wrap .edit .tool-bar .emoticon-wrap .item .img:hover {
@@ -438,8 +439,8 @@ button {
   width: 80px;
   height: 90px;
   float: left;
-  border-top: 1px solid #e4e5e5;
-  border-left: 1px solid #e4e5e5;
+  border-top: 1px solid #f5f5f5;
+  border-left: 1px solid #f5f5f5;
   box-sizing: border-box;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACN0lEQVRoQ+2Yv2sUURDHv99Do8Y0IqYUNCJmV0QRwUoQi+wd/ijCbgzYJPgPaGFjob0IIX1QAsLtngQFvb0DGwsbrSz2EiHFFSmusLA5MJfcjpzocSHPK555l2x4Wz6YefOZ+c5jZol98nGfcMAoyIXq4tF1Do+3N9lYLUyumUyaMRAnDp+SfAzgwB+Ad81DTb9+feanCSAjIE41nKVwQRHw+8QLbmYGxI3DzyCvqANOLybe3a87DWOkIm4cNUEMq4IV8l5twn+VDZBK2AJ4UBmsYCbJBy8tyD8yYEZatiL6grMV6Zc710rLSsvM0Gilpa8sW5G+ubPSstLC9h5x4tINQKZJOQ1hTidJQlyjwvdvX4JvABqafn9Q5GPiBXMgpdfHlhHFiaOHJJ7rXDJIGxGUap4/1QvTBTlTjk4MEWskhgYZlO5dKfhg2fPn/tp3Qdw4ug3ira7jXbDbsv93QZxK6Q4hb3YhIN0r1SBj1aXRw+lmHcQRXc+DtEsFj5bzwbNt0uocuNXwlqR8vdf7RICklY5cXi0U1pUgncPxcvEqmbu/V59fEXzakJH5XohO3HZDtBui/a/V/020PWJ7xPaI7RH9ycnu7Pq5syOK/R2ELD2/TiX6TuC4qmxt4eRK3l/6j3ZQmpoZUeKwAnJCDdI+tZKfrmcC5Hy5OCbkF5DHegMWyIuaNzW70xDGFquO43MfimdzG7kFUi5B0BCwxJN4krhBK1MgJoLt59NIjwwawqi0Bg3zC4BUPELildChAAAAAElFTkSuQmCC) no-repeat center;
   background-size: 18px 18px;
@@ -447,6 +448,31 @@ button {
 
 .message-wrap .edit .tool-bar .emoticon-wrap .upload:hover {
   background-size: 20px 20px;
+}
+
+.message-wrap .edit .tool-bar .packet-wrap {
+  display: none;
+  position: absolute;
+  width: 250px;
+  background: #fff;
+  left: 12px;
+  bottom: 52px;
+  border-radius: 3px;
+  box-shadow: #999 0 2px 10px;
+  cursor: pointer;
+}
+
+.message-wrap .edit .tool-bar .packet-wrap::after {
+  content: '';
+  position: absolute;
+  left: 46px;
+  bottom: -18px;
+  border: 10px solid transparent;
+  border-top-color: #fff;
+}
+
+.message-wrap .edit .tool-bar .packet-wrap img {
+  width: 250px;
 }
 
 .message-wrap .edit .emoticon-show .emoticon-wrap {
@@ -460,7 +486,7 @@ button {
 .message-wrap .edit .inp {
   font-size: 14px;
   height: 80px;
-  padding: 6px 16px 0 16px;
+  padding: 0px 16px 0 16px;
   outline: none;
   overflow-y: auto;
 }
@@ -488,6 +514,129 @@ button {
   line-height: 30px;
 }
 
+@media screen and (max-width: 700px) {
+  #login-wrap {
+    width: 300px;
+    height: 426px;
+  }
+
+  #login-wrap .select .por {
+    width: 42px;
+    height: 42px;
+  }
+
+  #login-wrap .user-portrait {
+    padding: 38px 0 6px 2px;
+  }
+
+  #login-wrap .user-portrait .my-por {
+    width: 42px;
+    height: 42px;
+  }
+
+  #login-wrap .select {
+    padding-top: 18px;
+  }
+
+  #login-wrap .chat-btn {
+    margin-top: 30px;
+  }
+
+  #chat-wrap .user-list-wrap {
+    position: absolute;
+    top: 0;
+    left: -260px;
+    z-index: 2;
+    transition: left 0.2s ease 0s;
+  }
+
+  #chat-wrap .message-wrap {
+    width: 100% !important;
+  }
+
+  #chat-wrap .message-wrap[data-blur=true] .top,  #chat-wrap .message-wrap[data-blur=true] .list,  #chat-wrap .message-wrap[data-blur=true] .edit input,  #chat-wrap .message-wrap[data-blur=true] .edit .btn,  #chat-wrap .message-wrap[data-blur=true] .edit .tool-bar .emoticon,  #chat-wrap .message-wrap[data-blur=true] .edit .tool-bar .packet {
+    filter: blur(3px);
+  }
+
+  #chat-wrap .message-wrap .top .open {
+    width: 20px;
+    height: 38px;
+    position: absolute;
+    left: 12px;
+    top: 6px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAB5ElEQVRoQ+2XPS9EQRiFz7m7iURBQSMKW2zCXlvwA+iE1UhIFqEUCr+HWD9AXCwa2RUU/gHxsQWSja9GFBIN7p1Xro8lEh+N7MzN3Hpy55z3mZn3PUREPkbEB6JnJLWTb+Gj3yVwEoSK60xK4PiEKjuO2j3sHb0Itb4QcTeXx6hkHkStzga+ahPgHsDUcV92gW5xpZ2i9kHETDLxSauvqDrpFpfWCQwYauJNtuTpFrwbko1GGxFchkSuCTSZbESA8+gcrdTmYtpRzp6xl10QKEd1vD6/BW+cYM7E51eIiVJv1qt09rAh4inodiAJEb2f4m8boskX/V179GYt06lYIroRtET0JSLCZGG1uYZBIgC1DlYxiP8gsfJpZvAKpFSCVXprMSUB8wBTulX6Rz2CA8bV8GHPSIlt26sNMd8/A1BvlIn3JALcqni8NcwjcySnTDTxoVlmwjH+hEDScCOlkMgdyTqTjQhwS7fo7RLsNtqIYCc0kiXomWxECQbfgtVSjsSkkWZEZo8yw9OVEaW96A0J0A9hgtA9WMEHUBZgo5TJrlUaopEkvoi2Q6NuFC0RS+SfKhDBo2WD1T+dlb/81garv1SpKmtssKpK2b/d1AYrvXgANlhVm4jABqtqM/h9/8gMjc9CqeBtlCHdogAAAABJRU5ErkJggg==) no-repeat center;
+    background-size: 20px 20px;
+  }
+
+  #chat-wrap .message-wrap .edit {
+    height: 136px;
+  }
+
+  #chat-wrap .message-wrap .edit .inp {
+    height: 42px;
+  }
+
+  #chat-wrap .message-wrap .edit .emoticon-show .emoticon-wrap {
+    padding: 6px;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #chat-wrap .message-wrap .edit .emoticon-show .emoticon-wrap .item:nth-of-type(20) {
+    display: none;
+  }
+
+  #chat-wrap .message-wrap .edit .emoticon-show .emoticon-wrap .item {
+    border: 0;
+    flex-grow: 1;
+  }
+
+  #chat-wrap .message-wrap .edit .emoticon-show .emoticon-wrap .item .img {
+    max-width: 70%;
+    max-height: 70%;
+  }
+
+  #chat-wrap .message-wrap .edit .emoticon-show .emoticon-wrap .upload {
+    border: 0;
+    flex-grow: 1;
+  }
+
+  #chat-wrap .message-wrap .edit .packet-wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    left: 0;
+    top: 0;
+  }
+
+  #chat-wrap .message-wrap .edit .packet-wrap img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.38);
+    z-index: 1;
+  }
+}
+
 html,body {
   width: 100%;
   height: 100%;
@@ -510,6 +659,10 @@ body {
   height: 100%;
   background: rgba(46, 50, 56, 0.8);
   float: left;
+}
+
+#chat-wrap .mask {
+  display: none;
 }
 
 #chat-wrap .message-wrap {

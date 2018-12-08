@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="data:;base64,=">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>简言</title>
 </head>
@@ -13,7 +13,7 @@
     <div class="title">欢迎来到简言</div>
     <div class="user-name contenteditable" contenteditable></div>
     <div class="user-portrait">
-      <span class="tips">从下面图片中选择一个作为聊天头像</span>
+      <span class="tips">请选择一张图片作为头像</span>
       <img class="my-por">
     </div>
     <div class="select"></div>
@@ -38,8 +38,9 @@
         </div> -->
       </div>
     </div>
-    <div class="message-wrap">
+    <div class="message-wrap" data-blur="false">
       <div class="top">
+        <i class="open"></i>
         <div class="btn group" data-now="true">群聊</div>
         <div class="btn member">成员</div>
       </div>
@@ -61,6 +62,9 @@
           <div class="emoticon-wrap">
             <!-- <div class="upload">【误删】解决webpack过滤无效css问题（后来元素）</div> -->
           </div>
+          <div class="packet-wrap">
+            <img src="./images/packet.png">
+          </div>
         </div>
         <div class="inp" contenteditable></div>
         <div class="btn">
@@ -69,6 +73,7 @@
         </div>
       </div>
     </div>
+    <div class="mask"></div>
   </div>
   <input type="file" id="file" accept="image/*" style="display:none">
   <script src="/socket.io/socket.io.js"></script>

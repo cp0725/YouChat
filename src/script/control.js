@@ -25,9 +25,35 @@ $('.member').onclick = () => { // 成员
 $('.emoticon').onclick = e => { // 打开表情
   e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true
   $('.tool-bar').classList.toggle('emoticon-show')
+  if (window.screen.width < 700){ 
+    // 移动端
+    $('.message-wrap').setAttribute('data-blur', 'true')
+    $('.mask').style.display = 'block'    
+  }
+}
+$('.packet').onclick = e => { // 打开红包
+  e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true
+  if ($('.packet-wrap').style.display == 'block'){
+    $('.packet-wrap').style.display = 'none'
+  }else{
+    $('.packet-wrap').style.display = 'block'
+  }
 }
 $('body').onclick = e => {
   $('.tool-bar').classList.remove('emoticon-show')
+  $('.packet-wrap').style.display = 'none' // 关闭红包
+}
+
+// 移动端打开用户列表
+$('.open').onclick = e => {
+  $('.message-wrap').setAttribute('data-blur','true')
+  $('.mask').style.display = 'block'
+  $('.user-list-wrap').style.left = "0px"
+}
+$('.mask').onclick = e => {
+  $('.message-wrap').setAttribute('data-blur', 'fasle')
+  $('.mask').style.display = 'none'
+  $('.user-list-wrap').style.left = "-260px"
 }
 
 export default {
@@ -46,6 +72,7 @@ export default {
         $(`.item[data-id="${info.member}"]`).removeAttribute('data-new')
         $(`.item[data-id="${info.member}"] .item-name`).setAttribute('data-message', 0)
       }
+      $('.mask').click()
     })
   },
   removeEventListener(dom, name, fun){

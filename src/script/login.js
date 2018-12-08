@@ -9,8 +9,7 @@ tool.ajax('GET', '/loadImg', null, (res) => {
 
 const oUserName = $('.user-name') 
 oUserName.oninput = e => {
-  const sUserName = oUserName.innerHTML
-  if (sUserName != ''){
+  if (oUserName.innerHTML != ''){
     oUserName.classList.remove('contenteditable')
   }else{
     oUserName.classList.add('contenteditable')
@@ -29,13 +28,21 @@ $('.select').onclick = e => {
 }
 
 $('.chat-btn').onclick = e => {
-  if (oUserName.innerHTML && sPorSrc){
+  const userName = oUserName.innerHTML
+  login(userName, sPorSrc)
+}
+
+function login(userName, sPorSrc){
+  if (userName && sPorSrc) {
     $('.my-info .portrait').setAttribute('src', sPorSrc)
-    $('.my-info .name').innerHTML = oUserName.innerHTML
+    $('.my-info .name').innerHTML = userName
     $('#chat-wrap').style.display = 'block'
     $('#login-wrap').style.display = 'none'
-    info.setData('name', oUserName.innerHTML)
+    info.setData('name', userName)
     info.setData('url', sPorSrc)
     initWebSocket()
+    localStorage.setItem('YouChatName', userName)
+    localStorage.setItem('YouChatPor', sPorSrc)
   }
 }
+login(localStorage.getItem('YouChatName'), localStorage.getItem('YouChatPor'))
