@@ -37,6 +37,11 @@ export default function(){
 
       let nNewNum = $('.top .group').getAttribute('data-message')
       $('.top .group').setAttribute('data-message', Number(nNewNum) + 1)
+
+      /*new Notification('收到来自简言的新消息', {
+        body: `${message.name}: ${message.text}`,
+        icon: message.url
+      })*/
     }
   })
   // 接收私聊消息
@@ -63,6 +68,11 @@ export default function(){
 
         let nNewNum = $(`.item[data-id="${message.id}"] .item-name`).getAttribute('data-message')
         $(`.item[data-id="${message.id}"] .item-name`).setAttribute('data-message', Number(nNewNum)+1)
+
+        /*new Notification('收到来自简言的新消息', {
+          body: `${message.name}: ${message.text}`,
+          icon: message.url
+        })*/
       }
     }
     // userList 消息摘要

@@ -1,0 +1,24 @@
+{
+  "name": "沟通从简言开始",
+  "short_name": "简言",
+  "display": "standalone",
+  "background_color": "#259085",
+  "theme_color": "#2bb8aa",
+  "icons": [
+    {
+      "src": "./ioc_96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./ioc_144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./ioc_192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
