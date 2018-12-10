@@ -97,7 +97,6 @@ io.on('connection', (socket) => {
     socket.emit('sendMessageMember', message)
     io.to(message.memberId).emit('sendMessageMember', message)
   })
-
 })
 
 server.listen(8686, () => {
