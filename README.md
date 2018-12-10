@@ -18,23 +18,17 @@ https://github.com/cp0725/YouChat
 
 
 **登录页**
-
 ![](https://upload-images.jianshu.io/upload_images/13130832-21fd678dda16e7f5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **群聊以及私聊功能**
-
 ![](https://upload-images.jianshu.io/upload_images/13130832-664251039f05c125.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
 
 ![](https://upload-images.jianshu.io/upload_images/13130832-7456a9a1258013d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **发送表情包发送本地图片**
-
 ![](https://upload-images.jianshu.io/upload_images/13130832-051ae2b7535609c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **移动端UI展现**
-
 ![](https://upload-images.jianshu.io/upload_images/13130832-d039d9d2fd70c9c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/13130832-30e02f6d1946555b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -42,7 +36,6 @@ https://github.com/cp0725/YouChat
 ![](https://upload-images.jianshu.io/upload_images/13130832-3ccb944acd45e328.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **h5 Notification 的表现效果**
-
 ![](https://upload-images.jianshu.io/upload_images/13130832-7e34c5ecb780061f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/13130832-cc9feb2241c19539.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
