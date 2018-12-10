@@ -53,10 +53,12 @@ manifest是PWA用到的一个技术点，关于PWA早就想学习一下了，直
 ![](https://upload-images.jianshu.io/upload_images/13130832-2926ba0ce5d66fcc.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 启动动画
+
 ![](https://upload-images.jianshu.io/upload_images/13130832-459bc714b244c39d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 主要功能
+
 ![](https://upload-images.jianshu.io/upload_images/13130832-3aba93d39a603bc6.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/13130832-8f237dc2546835c1.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
