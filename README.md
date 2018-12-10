@@ -29,6 +29,7 @@ https://github.com/cp0725/YouChat
 ![](https://upload-images.jianshu.io/upload_images/13130832-051ae2b7535609c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **移动端UI展现**
+
 ![](https://upload-images.jianshu.io/upload_images/13130832-d039d9d2fd70c9c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/13130832-30e02f6d1946555b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -48,10 +49,12 @@ https://github.com/cp0725/YouChat
 manifest是PWA用到的一个技术点，关于PWA早就想学习一下了，直到最近才看了官方的文档，我们用link标签在页面头部引入一个manifest配置文件，在manifest配置文件里可以配置页面图标、启动动画、应用名称等一些属性，然后通过浏览器把应用发送到桌面下次就可以直接从桌面进入，表现的效果接近原生的app，因为隐藏了浏览器的一些工具栏等操作区。交互性能上也要好很多，下面是相关的表现UI。
 
 桌面图标
+
 ![](https://upload-images.jianshu.io/upload_images/13130832-2926ba0ce5d66fcc.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 启动动画
 ![](https://upload-images.jianshu.io/upload_images/13130832-459bc714b244c39d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 主要功能
 ![](https://upload-images.jianshu.io/upload_images/13130832-3aba93d39a603bc6.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
