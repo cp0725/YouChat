@@ -397,6 +397,10 @@ button {
   border-left: 0;
 }
 
+.message-wrap .edit .tool-bar .emoticon-wrap .item:nth-of-type(20) {
+  display: none;
+}
+
 .message-wrap .edit .tool-bar .emoticon-wrap .item {
   width: 80px;
   height: 90px;
