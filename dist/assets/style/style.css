@@ -375,16 +375,6 @@ button {
   cursor: pointer;
 }
 
-.message-wrap .edit .tool-bar .packet {
-  float: left;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background: url(/assets/images/dcf5c14717b39fa9e218b5ef207630a9.png) no-repeat center;
-  background-size: 20px 20px;
-  cursor: pointer;
-}
-
 .message-wrap .edit .tool-bar .emoticon-wrap {
   display: none;
   width: 560px;
@@ -448,31 +438,6 @@ button {
 
 .message-wrap .edit .tool-bar .emoticon-wrap .upload:hover {
   background-size: 20px 20px;
-}
-
-.message-wrap .edit .tool-bar .packet-wrap {
-  display: none;
-  position: absolute;
-  width: 250px;
-  background: #fff;
-  left: 12px;
-  bottom: 52px;
-  border-radius: 3px;
-  box-shadow: #999 0 2px 10px;
-  cursor: pointer;
-}
-
-.message-wrap .edit .tool-bar .packet-wrap::after {
-  content: '';
-  position: absolute;
-  left: 46px;
-  bottom: -18px;
-  border: 10px solid transparent;
-  border-top-color: #fff;
-}
-
-.message-wrap .edit .tool-bar .packet-wrap img {
-  width: 250px;
 }
 
 .message-wrap .edit .emoticon-show .emoticon-wrap {
@@ -554,7 +519,7 @@ button {
     width: 100% !important;
   }
 
-  #chat-wrap .message-wrap[data-blur=true] .top,  #chat-wrap .message-wrap[data-blur=true] .list,  #chat-wrap .message-wrap[data-blur=true] .edit input,  #chat-wrap .message-wrap[data-blur=true] .edit .btn,  #chat-wrap .message-wrap[data-blur=true] .edit .tool-bar .emoticon,  #chat-wrap .message-wrap[data-blur=true] .edit .tool-bar .packet {
+  #chat-wrap .message-wrap[data-blur=true] .top,  #chat-wrap .message-wrap[data-blur=true] .list,  #chat-wrap .message-wrap[data-blur=true] .edit input,  #chat-wrap .message-wrap[data-blur=true] .edit .btn,  #chat-wrap .message-wrap[data-blur=true] .edit .tool-bar .emoticon {
     filter: blur(3px);
   }
 
@@ -606,24 +571,6 @@ button {
   #chat-wrap .message-wrap .edit .emoticon-show .emoticon-wrap .upload {
     border: 0;
     flex-grow: 1;
-  }
-
-  #chat-wrap .message-wrap .edit .packet-wrap {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    left: 0;
-    top: 0;
-  }
-
-  #chat-wrap .message-wrap .edit .packet-wrap img {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
   }
 
   .mask {

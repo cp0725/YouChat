@@ -31,17 +31,8 @@ $('.emoticon').onclick = e => { // 打开表情
     $('.mask').style.display = 'block'    
   }
 }
-$('.packet').onclick = e => { // 打开红包
-  e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true
-  if ($('.packet-wrap').style.display == 'block'){
-    $('.packet-wrap').style.display = 'none'
-  }else{
-    $('.packet-wrap').style.display = 'block'
-  }
-}
 $('body').onclick = e => {
   $('.tool-bar').classList.remove('emoticon-show')
-  $('.packet-wrap').style.display = 'none' // 关闭红包
 }
 
 // 移动端打开用户列表

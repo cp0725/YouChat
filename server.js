@@ -11,10 +11,9 @@ let emoticon = fs.readdirSync('./file/emoticon')
 emoticon = emoticon.map(item => `/file/emoticon/${item}`)
 emoticon = emoticon.filter((item, index) => {
   const TYPE = { gif: true, jpg: true, png: true, jpeg: true }
-  const status = TYPE[item.split('.')[1]] && index < 21
-  return status
+  return TYPE[item.split('.')[1]] 
 })
-
+emoticon = emoticon.filter((item, index) => index < 20)
 // 搭建静态服务
 app.get('*', (req, res) => {
   const assetsType = req.url.split('/')[1]
