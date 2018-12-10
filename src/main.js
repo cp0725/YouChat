@@ -6,8 +6,7 @@ import sendMessage from './script/sendMessage.js'
 import control from './script/control.js'
 
 // 获取权限
-/*
+
 if (Notification && Notification.requestPermission){
   Notification.requestPermission()
 }
-*/
